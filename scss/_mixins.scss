@@ -1,0 +1,23 @@
+//FontSize
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin fsz($size) {
+  // font-size: $size;
+  font-size: calculateRem($size);
+}
+
+@mixin lh($size) {
+  // line-height: $size;
+  line-height: calculateRem($size);
+}
+
+
+// Creates a wrapper for a series of columns
+// @mixin make-row-flex($gutter: $grid-gutter-width) {
+//   margin-left:  ceil(($gutter / -2));
+//   margin-right: floor(($gutter / -2));
+//   // @include clearfix;
+// }
